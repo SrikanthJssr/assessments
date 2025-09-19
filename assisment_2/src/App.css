@@ -1,0 +1,88 @@
+/* Root container */
+#root {
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Card styling */
+.user-card {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  border-radius: 16px;
+  background: #fff;
+  transition: box-shadow 0.3s, transform 0.3s;
+  padding: 1rem;
+  margin: 0 auto 1rem;
+  width: 100%;
+  min-height: 320px;
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hover effect */
+.user-card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+  transform: translateY(-4px) scale(1.03);
+}
+
+/* Avatar */
+.user-avatar {
+  border-radius: 50%;
+  background: #f5f5f5;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: box-shadow 0.3s;
+}
+.user-card:hover .user-avatar {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* Info text */
+.user-info {
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+}
+.user-info p {
+  margin: 0.5rem 0;
+  color: #333;
+}
+.user-info b {
+  color: #007bff;
+}
+
+/* Responsive breakpoints */
+
+@media (max-width: 600px) {
+  .user-card {
+    max-width: 100%;
+    min-height: auto;
+  }
+  .user-avatar {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .user-card {
+    max-width: 260px;
+    min-height: 320px;
+  }
+  .user-avatar {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .user-card {
+    max-width: 200px;
+    min-height: 320px;
+  }
+}
